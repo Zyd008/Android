@@ -8,20 +8,21 @@
 
 Datatime代指当时时间
 
-图片1![图片1](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/1.png)
+![图片1](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/1.png)
 
 
 notelslist_item添加一个 textView
 
-图片2
+![图片2](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/2.png)
 
 Notelist类参数添加
 
-图片3/4
+![图片3](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/3.png)
+![图片4](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/4.png)
 
 显示保存时间
 
-图片5
+![图片5](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/5.png)
 
 2.	时间更新
 
@@ -31,12 +32,12 @@ Notelist类参数添加
 
 添加以下的代码
 
-图片6
+![图片6](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/6.png)
 
 便可更新
 
-图片7
+![图片7](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/7.png)
 
 3.	搜索功能
 
-图片8
+![图片8](https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/8.png)
