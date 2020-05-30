@@ -32,6 +32,7 @@ public class NotesList extends ListActivity {
     private static final String[] PROJECTION = new String[] {
             NotePad.Notes._ID, // 0
             NotePad.Notes.COLUMN_NAME_TITLE, // 1
+            NotePad.Notes.COLUMN_NAME_CREATE_DATE,
             //扩展 显示时间 颜色
             NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE,
     };
@@ -91,11 +92,11 @@ public class NotesList extends ListActivity {
          */
 
         // The names of the cursor columns to display in the view, initialized to the title column
-        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
+        String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE,NotePad.Notes.COLUMN_NAME_CREATE_DATE} ;
 
         // The view IDs that will display the cursor columns, initialized to the TextView in
         // noteslist_item.xml
-        int[] viewIDs = { android.R.id.text1 ,R.id.text2};
+        int[] viewIDs = { android.R.id.text1, R.id.text1_time };
 
         // Creates the backing adapter for the ListView.
         SimpleCursorAdapter adapter

@@ -496,19 +496,18 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
 
         // Gets the current system time in milliseconds
         Long now = Long.valueOf(System.currentTimeMillis());
-        Date date = new Date(now);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-        String dataTime = format.format(date);
 
-        // If the values map doesn't contain the creation date, sets the value to the current time.
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        String dateTime = format.format(now);
+// If the values map doesn't contain the creation date, sets the value to the current time.
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_CREATE_DATE) == false) {
-            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, now);
+            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, dateTime);
         }
 
-        // If the values map doesn't contain the modification date, sets the value to the current
-        // time.
+// If the values map doesn't contain the modification date, sets the value to the current
+// time.
         if (values.containsKey(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE) == false) {
-            values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, now);
+            values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, dateTime);
         }
 
         // If the values map doesn't contain a title, sets the value to the default title.
@@ -649,6 +648,24 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
      */
     @Override
     public int update(Uri uri, ContentValues values, String where, String[] whereArgs) {
+
+
+        // Gets the current system time in milliseconds
+        Long now = Long.valueOf(System.currentTimeMillis());
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        String dateTime = format.format(now);
+        // If the values map doesn't contain the creation date, sets the value to the current time.
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_CREATE_DATE) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_CREATE_DATE, dateTime);
+        }
+
+// If the values map doesn't contain the modification date, sets the value to the current
+// time.
+        if (values.containsKey(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE) == false) {
+            values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, dateTime);
+        }
+        //结束
 
         // Opens the database object in "write" mode.
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
