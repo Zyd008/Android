@@ -8,7 +8,7 @@
 
 Datatime代指当时时间
 
-图片1
+图片1https://github.com/Zyd008/notepad/blob/master/app/src/main/res/mipmap-hdpi/1.png
 
 
 notelslist_item添加一个 textView
